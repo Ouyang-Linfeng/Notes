@@ -2,6 +2,7 @@
   - [怎么在Anki中用数学公式？](#怎么在anki中用数学公式)
   - [怎么达到注音的效果](#怎么达到注音的效果)
 - [Pot](#pot)
+- [Tickeys](#tickeys)
 
 # Anki
 ## 怎么在Anki中用数学公式？
@@ -14,3 +15,6 @@
 链接：https://github.com/pot-app/pot-desktop/  
 >使用Pot的目的：换下Utools，因为我使用Utools的目的只有划词翻译和截图OCR
 教程网站：https://pot.pylogmon.com/  
+# Tickeys
+>链接：https://www.yingdev.com/projects/Tickeys/  
+作用：键盘打字声模拟软件
