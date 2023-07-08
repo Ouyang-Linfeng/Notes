@@ -16,6 +16,8 @@
     - [方法来源](#方法来源)
     - [总结反思](#总结反思)
 - [Ehviewer\_CN\_SXJ](#ehviewer_cn_sxj)
+- [Proxy](#proxy)
+  - [Warp](#warp)
 
 # Anki
 ## 怎么在Anki中用数学公式？
@@ -59,3 +61,10 @@ https://askubuntu.com/questions/1421805/error-2147942402-0x80070002-when-launchi
 
 # Ehviewer_CN_SXJ
 链接：https://github.com/xiaojieonly/Ehviewer_CN_SXJ/  
+# Proxy
+## Warp
+>下载链接：https://1.1.1.1/  
+使用方法：
+1. 添加Telegram机器人@generatewarpplusbot
+2. 向机器人索要密钥
+3. 添加密钥
