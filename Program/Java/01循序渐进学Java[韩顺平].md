@@ -1,14 +1,26 @@
 [循序渐进学Java](https://www.bilibili.com/video/BV1fh411y7R8/)  
 课程地址：https://www.bilibili.com/video/BV1fh411y7R8
 - [第 01 章 | Java概述](#第-01-章--java概述)
-  - [1-1 | Java简介](#1-1--java简介)
-    - [Java的就业方向](#java的就业方向)
-    - [Java的体系技术平台](#java的体系技术平台)
-    - [Java的重要特点](#java的重要特点)
-  - [1-2 | Java的相关术语](#1-2--java的相关术语)
-    - [Java虚拟机（JVM）](#java虚拟机jvm)
-  - [1-3 | 第一个Java程序](#1-3--第一个java程序)
-  - [1-4 | Java的编译流程](#1-4--java的编译流程)
+	- [1-1 | Java简介](#1-1--java简介)
+		- [Java的就业方向](#java的就业方向)
+		- [Java的体系技术平台](#java的体系技术平台)
+		- [Java的重要特点](#java的重要特点)
+	- [1-2 | Java的相关术语](#1-2--java的相关术语)
+		- [Java虚拟机（JVM）](#java虚拟机jvm)
+		- [Java开发工具包（JDK）](#java开发工具包jdk)
+		- [JDK, JRM和JVM的关系](#jdk-jrm和jvm的关系)
+	- [1-3 | 第一个Java程序](#1-3--第一个java程序)
+		- [HelloWorld.java](#helloworldjava)
+	- [1-4 | Java的编译流程](#1-4--java的编译流程)
+		- [Java执行流程分析](#java执行流程分析)
+		- [Java程序开发注意事项](#java程序开发注意事项)
+		- [Java开发事项和细节说明](#java开发事项和细节说明)
+		- [Java转义字符](#java转义字符)
+		- [初学Java易犯错误](#初学java易犯错误)
+		- [Java的注释](#java的注释)
+		- [Java文档注释](#java文档注释)
+		- [Java代码规范](#java代码规范)
+		- [DOS命令](#dos命令)
 - [第 02 章 | 变量](#第-02-章--变量)
 - [第 03 章 | 运算符](#第-03-章--运算符)
 - [第 04 章 | 控制结构](#第-04-章--控制结构)
@@ -60,8 +72,117 @@ JavaEE软件工程师、大数据软件工程师、大数据应用工程师、�
 	1. JVM是一个虚拟的计算机，具有指令集并使用不同的存储区域。负责执行指令，管理数据、内存、寄存器，包含在JDK中。
 	2. 对于不同的平台，有不同的虚拟机。
 	3. JAVA虚拟机机制屏蔽了底层运行平台的差别，实现了”一次编译，到处运行“。
+### Java开发工具包（JDK）
+- JDK（Java Development Kit）
+  - JDK = JRE + Java开发工具
+  -  JDK是提供给Java开发人员使用的，其中包含了java的开发工具，也包括了JRE。所以安装了JDK,就不用在单独安装JRE了。
+- JRE （Java Runtime Environment）= Java运行环境
+	- JRE = JVM + Java的核心类库
+	- 包括Java虚拟机（JVM Java Virtual Machine）和Java程序所需的核心类库等，如果想要运行一个开发好的Java程序，计算机中只需要安装JRE即可。
+### JDK, JRM和JVM的关系
+-  JDK ， JRE 和 JVM 的包含关系 
+	1.  JDK = JRE + 开发工具集（例如 Javac ， Java 编译工具等）。
+	2.  JRE = JVM + JavaSE 标准类库（ Java 核心类库）。
+	3.  JDK = JVM + Java 标准类库 + 开发工具集。
+	4.  如果只想运行 .class 文件，只需要 JRE 。
 ## 1-3 | 第一个Java程序
+### HelloWorld.java
+```java
+//HelloWorld.java
+//这是Java快速入门，演示Java的开发步骤
+//对代码的相关说明
+//1. public class Hello 表示 Hello 是一个类，是一个 public 的类
+//2. Hello { } 表示一个类的开始和结束
+//3. public static void main(String[] args) 表示一个主方法，即我们程序的入口
+//4. main() { } 表示方法的开始和结束 
+//5. system.out.println("hello,world~"); 表示输出 "hello,world~" 到屏幕
+//6. ; 表示语句结束
+public class HelloWorld {
+
+	//编写一个main方法
+	public static void main(String[] args) {
+		system.out.println("hello,world~");
+	}
+}
+```
 ## 1-4 | Java的编译流程
+### Java执行流程分析
+![Java执行流程分析](https://cdn.jsdelivr.net/gh/51flow/Picture/img/202302222108643.png)
+### Java程序开发注意事项
+>**对修改后的 `.java` 源文件需要重新编译，生成新的`.class`文件后，再进行执行，才能生效。**
+### Java开发事项和细节说明
+1. Java 源文件以 `.java` 为拓展名。源文件的基本组成是类（class），如本类中的 Hello 类
+2. Java 应用程序的执行入口是 `main()` 方法。它有固定的书写格式： `public static void main(String[] args { }` 。
+3. Java 语言严格区分大小写
+4. Java 方法由一条条语句构成，每个语句以 `;` 结束。
+5. 大括号都是成对出现的，缺一不可。（习惯，先写 `{ }` 再写代码）
+6. 一个源文件中最多只能有一个 `public` 类。其它类的个数不限。（编译后，每一个类，都对应一个 `.class` )
+7. 如果源文件包含一个 public 类，则文件名必须按该类名命名。
+8. 一个源文件中最多只能有一个 `public` 类。其它类的个数不限，也可以将 `main` 方法写在非 `public` 类中，然后指定运行非 `public` 类，这样入口方法就是非 `public` 的 `main` 方法。
+### Java转义字符
+```java
+//ChangeChar.java
+//演示转义字符的使用
+public  class ChangeChar {
+	//编写一个 main 方法
+	public static void main(String[] args) {
+		System.out.println("北京\t天津\t上海");  //\t 一个制表位，实现对其的功能
+		System.out.println("Jack\nSmith\nMary");//\n 换行符
+		System.out.println("C:\\Windows\\System32\\cmd.exe");//		\\ 一个\、\\
+		System.out.println("C:\\\\Windows\\\\System32\\\\cmd.exe");
+		System.out.println("老韩说：\"要好好学习Java，有前途\"");//		\' 一个'
+		System.out.println("老韩说：\'要好好学习Java，有前途\'");//		\' 一个'
+		System.out.println("韩顺平教育\r北京"); //北京平教育//\r 一个回车
+		System.out.println("韩顺平教育\r\n北京");  //韩顺平教育 北京	
+	}
+}
+```
+### 初学Java易犯错误
+1. 找不到文件
+2. 主类名和文件名不一致
+3. 缺少分号
+### Java的注释
+1. 单行注释
+```java
+//单行注释
+```
+2. 多行注释
+```java
+/*
+多行注释
+*/
+```
+### Java文档注释
+```java
+//Comment02.java
+/**
+ * @author Olive
+ * @version 1.0 
+ * 
+ */
+public class Comment02{
+
+	public static void main(String[] args){
+		System.out.println("hello,world");
+	}
+}
+```
+### Java代码规范
+1. 类、方法的注释，要以 javadoc 的方式来写。JavaDoc的注释，往往是给代码的维护者看的，着重告述读者为什么这样写，如何修改，注意什么问题等。
+2. 使用 <kbd>tab</kbd> 操作，实现缩进，默认整体向右边移动，时候用shift+tab整体向左移。
+3. 运算符和 = 两边习惯性各加一个空格。
+4. 源文件使用 utf-8 编码。
+5. 行宽度不要超过 80 字符。
+6. 代码编写次行风格和行尾风格。
+### DOS命令
+- 常用的 DOS 命令
+	1. `dir` 查看当前目录有什么内容
+	2. `cd` 切换到其他盘下
+	3. `cd ..` 切换到上一级
+	4. `cd \` 切换到根目录
+	5. `tree` 查看指定的目录下所有的子级目录
+	6. `cls` 清屏
+	7. `exit` 推出DOS
 # 第 02 章 | 变量
 # 第 03 章 | 运算符
 # 第 04 章 | 控制结构
