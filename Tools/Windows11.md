@@ -18,6 +18,7 @@
 - [Ehviewer\_CN\_SXJ](#ehviewer_cn_sxj)
 - [Proxy](#proxy)
   - [Warp](#warp)
+  - [Sniffnet](#sniffnet)
 
 # Anki
 ## 怎么在Anki中用数学公式？
@@ -68,3 +69,7 @@ https://askubuntu.com/questions/1421805/error-2147942402-0x80070002-when-launchi
 1. 添加Telegram机器人@generatewarpplusbot
 2. 向机器人索要密钥
 3. 添加密钥
+
+## Sniffnet
+>github: https://github.com/GyulyVGC/sniffnet
+问题：下载后出现“**由于找不到wpcap.dll，无法继续执行代码。重新安装程序可能会解决此问题**”
